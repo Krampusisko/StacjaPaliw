@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StacjaPaliw</title>
+</head>
+<body>
+    <h1>Stacja Paliw</h1>
+    <div>
+        <input id="Benzo" type="radio" name="edward" value="kaiser">
+        <label for="Benzo">Benzyna</label>
+        <input id="Araby" type="radio" name="edward" value="kaiser">
+        <label for="Araby">Ropa</label>
+
+    </div>
+    <div>
+        <p>Ile litrów</p>
+        <input type="text" id="Syndyki">
+        <button onclick="husarz()">Suma</button>
+    </div>
+    <div>
+        <p>Cena wynosi:</p>
+        <p id="goeringTyKur"></p>
+    </div>
+    <script>
+        function husarz() {
+            var epet = document.getElementById("Syndyki").value;
+            let ilyria = document.getElementById("Benzo").checked;
+            let nejd = document.getElementById("Araby").checked;
+            if (ilyria == true) {
+                let Cena = epet * 6.7;
+                document.getElementById("goeringTyKur").innerHTML = Cena + "zł"
+            }
+            else if (nejd == true) {
+                let Cena = epet * 7.5;
+                document.getElementById("goeringTyKur").innerHTML = Cena + "zł"
+            }
+        }
+        </script>
+</body>
+</html>
